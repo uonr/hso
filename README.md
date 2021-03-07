@@ -13,3 +13,7 @@ It is currently adapted for protanopia only. (Because I am protanopia. I hope th
 3. Add visual hint for green, overlay stripes on top of green ([source](https://www.shadertoy.com/view/XlSSRz)).
 
 You can see the prototype [here](https://www.shadertoy.com/view/4scfDf).
+
+## Why
+
+There are already many color-blind filters that allow color-blind people to distinguish between different colors that their eyes confuse, but cannot tell them what color a color is. To do this, we have to encode the color information in some other way.
