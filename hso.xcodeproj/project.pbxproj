@@ -11,6 +11,11 @@
 		860F52C225F4C571000D9C10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F52C125F4C571000D9C10 /* ContentView.swift */; };
 		860F52C425F4C572000D9C10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860F52C325F4C572000D9C10 /* Assets.xcassets */; };
 		860F52C725F4C572000D9C10 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860F52C625F4C572000D9C10 /* Preview Assets.xcassets */; };
+		867B946925F5370B00090350 /* colorblind.metal in Sources */ = {isa = PBXBuildFile; fileRef = 867B946825F5370B00090350 /* colorblind.metal */; };
+		867B946C25F538C500090350 /* filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B946B25F538C500090350 /* filter.swift */; };
+		867B947C25F556B400090350 /* PreviewMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B947B25F556B400090350 /* PreviewMetalView.swift */; };
+		867B947F25F5593F00090350 /* GLSLFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867B947E25F5593F00090350 /* GLSLFilter.swift */; };
+		86BA560E25F576F2000411C9 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA560D25F576F2000411C9 /* ScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		860F52C825F4C572000D9C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		860F52C925F4C572000D9C10 /* hso.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hso.entitlements; sourceTree = "<group>"; };
 		860F52D025F4C6E2000D9C10 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		867B946825F5370B00090350 /* colorblind.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = colorblind.metal; sourceTree = "<group>"; };
+		867B946B25F538C500090350 /* filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filter.swift; sourceTree = "<group>"; };
+		867B947B25F556B400090350 /* PreviewMetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewMetalView.swift; sourceTree = "<group>"; };
+		867B947E25F5593F00090350 /* GLSLFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLSLFilter.swift; sourceTree = "<group>"; };
+		86BA560D25F576F2000411C9 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +65,17 @@
 		860F52BE25F4C571000D9C10 /* hso */ = {
 			isa = PBXGroup;
 			children = (
+				867B947B25F556B400090350 /* PreviewMetalView.swift */,
+				867B947E25F5593F00090350 /* GLSLFilter.swift */,
 				860F52BF25F4C571000D9C10 /* hsoApp.swift */,
 				860F52C125F4C571000D9C10 /* ContentView.swift */,
+				867B946825F5370B00090350 /* colorblind.metal */,
 				860F52C325F4C572000D9C10 /* Assets.xcassets */,
 				860F52C825F4C572000D9C10 /* Info.plist */,
 				860F52C925F4C572000D9C10 /* hso.entitlements */,
 				860F52C525F4C572000D9C10 /* Preview Content */,
+				867B946B25F538C500090350 /* filter.swift */,
+				86BA560D25F576F2000411C9 /* ScreenViewController.swift */,
 			);
 			path = hso;
 			sourceTree = "<group>";
@@ -142,7 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86BA560E25F576F2000411C9 /* ScreenViewController.swift in Sources */,
 				860F52C225F4C571000D9C10 /* ContentView.swift in Sources */,
+				867B946925F5370B00090350 /* colorblind.metal in Sources */,
+				867B946C25F538C500090350 /* filter.swift in Sources */,
+				867B947F25F5593F00090350 /* GLSLFilter.swift in Sources */,
+				867B947C25F556B400090350 /* PreviewMetalView.swift in Sources */,
 				860F52C025F4C571000D9C10 /* hsoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +301,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTLLINKER_FLAGS = "-fcikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
+				MTL_ENABLE_MODULES = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = koppa.hso;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -303,6 +326,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTLLINKER_FLAGS = "-fcikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
+				MTL_ENABLE_MODULES = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = koppa.hso;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

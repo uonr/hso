@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ReplayKit
 
 @main
 struct hsoApp: App {
